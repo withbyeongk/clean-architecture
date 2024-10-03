@@ -38,4 +38,9 @@ public class SlotRepositoryImpl implements SlotRepository {
     public List<Slot> findCompletedSlots() {
         return slotJpaRepository.findCompletedSlots();
     }
+
+    @Override
+    public Slot save(Slot slot) {
+        return slotJpaRepository.save(slot);
+    }
 }

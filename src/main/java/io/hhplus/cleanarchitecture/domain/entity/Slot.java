@@ -61,4 +61,10 @@ public class Slot {
     public void plusReservedCount() {
         this.reservedCount++;
     }
+
+    public void availableValidate() {
+        if (this.reservedCount >= this.capacity && this.capacity < 1) {
+            throw new RuntimeException("더 이상 예약할 수 없습니다.");
+        }
+    }
 }

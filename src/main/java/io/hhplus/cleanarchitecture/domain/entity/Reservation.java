@@ -21,7 +21,7 @@ public class Reservation {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "id")
     private Slot slot;
 
     @Column(nullable = false)
