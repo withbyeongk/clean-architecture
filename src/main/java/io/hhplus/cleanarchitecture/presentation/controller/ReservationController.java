@@ -17,7 +17,6 @@ public class ReservationController {
      */
     @PostMapping("/reservations")
     public Slot makeReservation(RequestReservationDTO dto) {
-        Slot slot = reservationService.makeReservation(dto.getMemberId(), dto.getSlotId());
-        return slot;
+        return reservationService.makeReservation(dto.getMemberId(), dto.getSlotId());
     }
 }
