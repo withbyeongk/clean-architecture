@@ -33,4 +33,13 @@ public class Reservation {
     @CreatedDate
     private LocalDateTime createdAt = LocalDateTime.now();
 
+
+    public Reservation(String memberId, Long slotId) {
+        if (memberId == null || memberId.isEmpty()) {
+            throw new IllegalArgumentException("사용자 ID를 입력해야 합니다.");
+        }
+        this.memberId = memberId;
+        this.slotId = slotId;
+    }
+
 }
