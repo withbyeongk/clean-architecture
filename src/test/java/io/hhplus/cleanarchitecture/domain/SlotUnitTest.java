@@ -11,7 +11,7 @@ import java.time.LocalTime;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class SlotTest {
+public class SlotUnitTest {
 
     @Test
     @DisplayName("예약할 때 특강 슬롯 ID 값이 0보다 작거나 같으면 IllegalArgumentException 에러가 발생한다.")

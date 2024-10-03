@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ReservationTest {
+public class ReservationUnitTest {
 
     @Test
     @DisplayName("예약할 때 사용자 ID에 값이 없다면 IllegalArgumentException 에러가 발생한다.")
