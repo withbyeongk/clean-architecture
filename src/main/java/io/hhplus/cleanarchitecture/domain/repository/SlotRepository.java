@@ -15,4 +15,5 @@ public interface SlotRepository {
 
     Optional<Slot> findBySlotId(Long slotId);
 
+    List<Slot> findCompletedSlots();
 }

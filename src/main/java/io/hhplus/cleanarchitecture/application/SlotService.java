@@ -24,4 +24,8 @@ public class SlotService {
     public List<Slot> findSlotsByMemberId(String memberId) {
         return slotRepository.findSlotsByMemberId(memberId);
     }
+
+    public List<Slot> findCompletedSlots() {
+        return slotRepository.findCompletedSlots();
+    }
 }

@@ -33,4 +33,9 @@ public class SlotRepositoryImpl implements SlotRepository {
     public Optional<Slot> findBySlotId(Long slotId) {
         return slotJpaRepository.findById(slotId);
     }
+
+    @Override
+    public List<Slot> findCompletedSlots() {
+        return slotJpaRepository.findCompletedSlots();
+    }
 }

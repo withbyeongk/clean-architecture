@@ -37,4 +37,13 @@ public class SlotController {
     public List<Slot> findSlotsByMemberId(@PathVariable String memberId) {
         return slotService.findSlotsByMemberId(memberId);
     }
+
+    /**
+     * 신청이 완료된 특강 슬롯 목록을 조회합니다.
+     */
+
+    @GetMapping("/slots/completed")
+    public List<Slot> findCompletedSlots() {
+        return slotService.findCompletedSlots();
+    }
 }
