@@ -48,4 +48,17 @@ public class Slot {
     @CreatedDate
     private LocalDateTime createdAt = LocalDateTime.now();
 
+    public Slot(Long id, LocalDate date, LocalTime startTime, int capacity, int reservedCount, String title, String coachName) {
+        this.id = id;
+        this.date = date;
+        this.startTime = startTime;
+        this.capacity = capacity;
+        this.reservedCount = reservedCount;
+        this.title = title;
+        this.coachName = coachName;
+    }
+
+    public void plusReservedCount() {
+        this.reservedCount++;
+    }
 }
