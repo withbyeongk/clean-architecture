@@ -38,6 +38,10 @@ public class Reservation {
         if (memberId == null || memberId.isEmpty()) {
             throw new IllegalArgumentException("사용자 ID를 입력해야 합니다.");
         }
+
+        if (slotId == null || slotId <= 0) {
+            throw new IllegalArgumentException("특강 슬롯 ID는 0보다 큰 값이어야 합니다.");
+        }
         this.memberId = memberId;
         this.slotId = slotId;
     }
