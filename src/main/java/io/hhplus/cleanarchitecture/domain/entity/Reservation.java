@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "reservation")
+@Table(name = "reservation", uniqueConstraints = @UniqueConstraint(columnNames = {"slotId", "memberId"}))
 public class Reservation {
 
     @Id
