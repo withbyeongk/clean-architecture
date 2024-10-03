@@ -14,14 +14,10 @@ public class SlotService {
     private final SlotRepository slotRepository;
 
     public List<Slot> findAllSlots() {
-        return List.of();
+        return slotRepository.findAllSlots();
     }
 
     public List<Slot> findAvailableSlots() {
-        return List.of();
-    }
-
-    public List<Slot> findSlotsByMemberId(String memberId) {
-        return List.of();
+        return slotRepository.findAvailableSlots();
     }
 }

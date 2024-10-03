@@ -19,7 +19,7 @@ public class SlotController {
      */
     @GetMapping("/slots")
     public List<Slot> findAllSlots() {
-        return List.of();
+        return slotService.findAllSlots();
     }
 
     /**
@@ -27,15 +27,6 @@ public class SlotController {
      */
     @GetMapping("/slots/available")
     public List<Slot> findAvailableSlots() {
-        return List.of();
+        return slotService.findAvailableSlots();
     }
-
-    /**
-     * 사용자 이름으로 등록된 특강 슬롯 목록을 조회합니다.
-     */
-    @GetMapping("/slots/{memberId}")
-    public List<Slot> findSlotsByMemberId(@PathVariable String memberId) {
-        return List.of();
-    }
-
 }

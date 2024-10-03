@@ -21,12 +21,12 @@ public class SlotRepositoryImpl implements SlotRepository {
 
     @Override
     public List<Slot> findAllSlots() {
-        return List.of();
+        return slotJpaRepository.findAll();
     }
 
     @Override
     public List<Slot> findAvailableSlots() {
-        return List.of();
+        return slotJpaRepository.findAllAvailableSlots();
     }
 
     @Override
