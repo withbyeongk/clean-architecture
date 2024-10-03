@@ -16,12 +16,12 @@ import java.time.LocalDateTime;
 public class Reservation {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reservation_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "id")
     private Slot slot;
 
     @Column(nullable = false)

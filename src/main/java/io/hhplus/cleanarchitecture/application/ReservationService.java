@@ -17,9 +17,11 @@ public class ReservationService {
     public Slot makeReservation(String memberId, Long slotId) {
         Reservation makeReservation = new Reservation(memberId, slotId);
 
-        Reservation savedReservation = reservationRepository.makeReservation(makeReservation);
+        Slot findSlot = slotRepository.findBySlotId(slotId).orElseThrow(() -> new RuntimeException("특강 슬롯을 찾을 수 없습니다."));
 
-        Slot findSlot = slotRepository.findBySlotId(savedReservation.getSlotId()).orElseThrow(() -> new RuntimeException("특강 슬롯을 찾을 수 없습니다."));
+        findSlot.availableValidate();
+
+        reservationRepository.makeReservation(makeReservation);
 
         findSlot.plusReservedCount();
 
