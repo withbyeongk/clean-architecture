@@ -11,5 +11,6 @@ public interface SlotJpaRepository extends JpaRepository<Slot, Long> {
     @Query("select s from Slot s where s.reservedCount < s.capacity and s.date > now()")
     List<Slot> findAllAvailableSlots();
 
+    @Query("select s from Slot s join Reservation r on r.slotId = s.id where r.memberId = :memberId")
     List<Slot> findSlotsByMemberId(String memberId);
 }

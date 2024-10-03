@@ -29,4 +29,12 @@ public class SlotController {
     public List<Slot> findAvailableSlots() {
         return slotService.findAvailableSlots();
     }
+
+    /**
+     * 사용자 이름으로 등록된 특강 슬롯 목록을 조회합니다.
+     */
+    @GetMapping("/slots/{memberId}")
+    public List<Slot> findSlotsByMemberId(@PathVariable String memberId) {
+        return slotService.findSlotsByMemberId(memberId);
+    }
 }

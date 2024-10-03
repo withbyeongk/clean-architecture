@@ -20,4 +20,8 @@ public class SlotService {
     public List<Slot> findAvailableSlots() {
         return slotRepository.findAvailableSlots();
     }
+
+    public List<Slot> findSlotsByMemberId(String memberId) {
+        return slotRepository.findSlotsByMemberId(memberId);
+    }
 }

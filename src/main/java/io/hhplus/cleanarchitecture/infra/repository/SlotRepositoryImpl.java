@@ -16,7 +16,7 @@ public class SlotRepositoryImpl implements SlotRepository {
 
     @Override
     public List<Slot> findSlotsByMemberId(String memberId) {
-        return List.of();
+        return slotJpaRepository.findSlotsByMemberId(memberId);
     }
 
     @Override
@@ -31,6 +31,6 @@ public class SlotRepositoryImpl implements SlotRepository {
 
     @Override
     public Optional<Slot> findBySlotId(Long slotId) {
-        return Optional.empty();
+        return slotJpaRepository.findById(slotId);
     }
 }
