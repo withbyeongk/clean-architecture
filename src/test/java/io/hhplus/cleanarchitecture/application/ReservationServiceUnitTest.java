@@ -58,7 +58,6 @@ class ReservationServiceUnitTest {
         Long slotId = 1L;
 
         // when
-        when(reservationRepository.makeReservation(any(Reservation.class))).thenReturn(new Reservation(memberId, slotId));
         when(slotRepository.findBySlotId(slotId)).thenReturn(Optional.empty());
 
         // then
